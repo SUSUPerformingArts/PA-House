@@ -7,10 +7,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST")
 
 $name=$_POST['name'];
 $description=$_POST['description'];
-$status=$_POST['status'];
 $added_by=$_POST['added_by'];
 
-$query = "INSERT INTO `house_objects` (`id`, `name`, `description`, `status`, `added_by`, `container_id`) VALUES ('','$name','$description','$status','$added_by',0)";
+$query = "INSERT INTO `house_objects` (`id`, `name`, `description`, `status`, `added_by`, `container_id`) VALUES ('','$name','$description','In House','$added_by',0)";
 include './database_connect.php';
 
 if($result){
@@ -43,13 +42,6 @@ print("
             <input type="text" name="name" class="span12" placeholder="Type name of item...">
             <label>Description</label>
             <textarea name="description" class="span12" rows="5"></textarea>
-            <label>Status of object</label>
-            <select name="status" class="span12">
-                <option>In House</option>
-                <option>Checked Out</option>
-                <option>Missing</option>
-                <option>Retired</option>
-            </select>
             <label>Your Name</label>
             <input type="text" name="added_by"  class="span12" placeholder="Type your name here...">
             <p><input type="submit" class="btn span12"></p>
