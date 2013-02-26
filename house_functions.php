@@ -1,9 +1,14 @@
 <?php
 
-function echoItem($name, $description, $status, $added_by, $container_id)
+function echoItem($name, $description, $status, $added_by, $container_id,$imageURL)
 {
     echo '<p><div class="thumbnail">';
+    if($imageURL=='')
+    {
     echo '<img src="http://placehold.it/300x200" alt="">';
+    } else {
+        echo '<img src="./uploads/'.$imageURL.'" alt "">';
+    }
     echo '<h3>'.$name.'</h3>';
     if($status=="In House")
     {

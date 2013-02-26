@@ -16,10 +16,10 @@
 
 <?php
 $order = $_GET['order'];
-/*if($order=='')
+if($order=='')
 {
 	$order="id";
-}*/
+}
 $query="SELECT * FROM house_objects ORDER BY $order DESC";
 include "database_connect.php";
 

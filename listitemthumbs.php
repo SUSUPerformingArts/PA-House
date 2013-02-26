@@ -29,8 +29,9 @@ while($i < $num)
 	$status=mysql_result($result,$i,"status");
 	$added_by=mysql_result($result,$i,"added_by");
 	$container_id=mysql_result($result,$i,"container_id");
+	$imageURL=mysql_result($result,$i,"imageURL");
 	echo "<div class='span3'>";
-    echoItem($name, $description, $status, $added_by, $container_id);
+    echoItem($name, $description, $status, $added_by, $container_id, $imageURL);
     echo '</div>';
 
 	$i++;
