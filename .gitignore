@@ -11,9 +11,5 @@ Thumbs.db
 
 database_vars.php
 
-bootstrap.css
-bootstrap.min.css
-glyphicons-halflings-white.png
-glyphicons-halflings.png
-bootstrap.js
-bootstrap.min.js
+
+assets/
