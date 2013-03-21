@@ -48,6 +48,7 @@ while($i < $num)
 	$status=mysql_result($result,$i,"status");
 	$added_by=mysql_result($result,$i,"added_by");
 	$container_id=mysql_result($result,$i,"container_id");
+    $item = new HouseItem($result, $i);
 
 	$class='';
 
@@ -61,12 +62,12 @@ while($i < $num)
 	}
 
 	echo '<tr class="'.$class.'">';
-		echo '<td>'.$id.'</td>';
-		echo '<td>'.$name.'</td>';
-		echo '<td>'.$description.'</td>';
-		echo '<td>'.$status.'</td>';
-		echo '<td>'.$added_by.'</td>';
-		echo '<td>'.$container_id.'</td>';
+		echo '<td>'.$item->id.'</td>';
+		echo '<td><a href="item.php?id='.$item->id.'">'.$item->name.'</a></td>';
+		echo '<td>'.$item->description.'</td>';
+		echo '<td>'.$item->status.'</td>';
+		echo '<td>'.$item->added_by.'</td>';
+		echo '<td>'.$item->container_id.'</td>';
 		echo '<td>
     <div class="btn-group">
     <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">

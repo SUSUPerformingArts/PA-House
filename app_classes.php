@@ -43,7 +43,11 @@ class HouseItem
 	}
 
 	public function displayName($header){
+		if($header == ''){
+			echo $name;
+		} else {
 			echo '<'.$header.'>'.$this->name.'</'.$header.'>';
+		}
 	}
 
 	public function displayDescription(){
