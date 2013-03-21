@@ -15,38 +15,31 @@ class Action
 
 class HouseItem
 {
-	public $id;
-	public $name;
-	public $description;
-	public $status;
-	public $added_by;
-	public $container_id;
-	public $imageURL;
 
 	function HouseItem() {
 		$this->__construct();
 	}
 
-	public function __construct($id,$name,$description,$status,$added_by,$container_id,$imageURL) {
-		$this->id = $id;
-		$this->name = $name;
-		$this->description = $description;
-		$this->status = $status;
-		$this->added_by = $added_by;
-		$this->container_id = $container_id;
-		$this->imageURL = $imageURL;
+	public function __construct($result, $i){
+		$this->id=mysql_result($result,$i,"id");
+		$this->name=mysql_result($result,$i,"name");
+		$this->description=mysql_result($result,$i,"description");
+		$this->status=mysql_result($result,$i,"status");
+		$this->added_by=mysql_result($result,$i,"added_by");
+		$this->container_id=mysql_result($result,$i,"container_id");
+		$this->imageURL=mysql_result($result,$i,"imageURL");
 	}
 
-	public function getFullURL(){
+	public function getImageURL(){
 		return './uploads/'.$this->imageURL;
 	}
 
 	public function displayImgURL(){
-		echo $this->getFullURL();
+		echo $this->getImageURL();
 	}
 
 	public function displayThumbnail(){
-		echo '<img class="thumbnail" src="'.$this->getFullURL().'" />';
+		echo '<img class="thumbnail" src="'.$this->getImageURL().'" />';
 	}
 
 	public function displayName($header){
