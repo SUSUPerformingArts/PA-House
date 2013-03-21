@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+include 'app_classes.php';
+
+
+
+?><!DOCTYPE html>
 <html>
     <head>
         <title>PA House System</title>

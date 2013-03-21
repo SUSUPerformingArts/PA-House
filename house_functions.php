@@ -53,4 +53,8 @@ echo'     <div class="btn-group">
     echo '</div></p>'; //thumbnail
 }
 
+function item_image($id){
+    
+}
+
 ?>
