@@ -31,7 +31,7 @@ while($i < $num)
 	$container_id=mysql_result($result,$i,"container_id");
 	$imageURL=mysql_result($result,$i,"imageURL");
 	echo "<div class='span3'>";
-    echoItem($name, $description, $status, $added_by, $container_id, $imageURL);
+    echoItem($id, $name, $description, $status, $added_by, $container_id, $imageURL);
     echo '</div>';
 
 	$i++;

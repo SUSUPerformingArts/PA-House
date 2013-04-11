@@ -1,6 +1,6 @@
 <?php
 
-function echoItem($name, $description, $status, $added_by, $container_id,$imageURL)
+function echoItem($id, $name, $description, $status, $added_by, $container_id,$imageURL)
 {
     echo '<p><div class="thumbnail">';
     if($imageURL=='')
@@ -9,7 +9,7 @@ function echoItem($name, $description, $status, $added_by, $container_id,$imageU
     } else {
         echo '<img src="./uploads/'.$imageURL.'" alt "">';
     }
-    echo '<h3>'.$name.'</h3>';
+    echo '<h3><a href="http://perform.susu.org/house/item.php?id='.$id'>'.$name.'</a></h3>';
     if($status=="In House")
     {
     	echo '<span class="label label-success">In House</span>';
