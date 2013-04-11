@@ -9,7 +9,7 @@ function echoItem($id, $name, $description, $status, $added_by, $container_id,$i
     } else {
         echo '<img src="./uploads/'.$imageURL.'" alt "">';
     }
-    echo '<h3><a href="http://perform.susu.org/house/item.php?id='.$id'>'.$name.'</a></h3>';
+    echo '<h3><a href="http://perform.susu.org/house/item.php?id='.$id.'">'.$name.'</a></h3>';
     if($status=="In House")
     {
     	echo '<span class="label label-success">In House</span>';
